@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Chanakya</title>
+<link rel="stylesheet" href="style.css">
+<style>body { padding: 40px; overflow-y:auto; font-size:16px; line-height:1.8; color:#d4d4d4; } h1, h2 { color:#cd9b47; } p { margin-bottom:15px; }</style>
+</head>
+<body>
+    <div style="text-align:right; margin-bottom:20px;">
+        <button id="langBtn" class="lang-btn" onclick="toggleLanguage()">हिंदी में पढ़ें</button>
+    </div>
+
+    <div id="content-en">
+        <h1>Chanakya Font Converter</h1>
+        <hr style="border-top:1px solid #444; margin:20px 0;">
+        
+        <h2>1. The Gold Standard of Print</h2>
+        <p>Chanakya is known for its beautiful, artistic curves. It is the primary font for major Hindi newspapers like Dainik Bhaskar and Rajasthan Patrika.</p>
+
+        <h2>2. Why Chanakya breaks in other tools?</h2>
+        <p>Chanakya uses "Ligatures" (joined characters). For example, 'Kra' (क्र) in Chanakya is a single unique symbol, not a combination of 'K' + 'Ra'. Other converters treat these as errors or question marks (??).</p>
+
+        <h2>3. The Wishall Advantage</h2>
+        <p>Wishall maps over 500+ rare Chanakya glyphs. We handle "Halant" (half-characters) properly so words like 'Vidya' (विद्या) stay joined and beautiful, just like in print.</p>
+    </div>
+
+    <div id="content-hi" style="display:none;">
+        <h1>चाणक्य फोंट कनवर्टर</h1>
+        <hr style="border-top:1px solid #444; margin:20px 0;">
+        
+        <h2>1. प्रिंट का गोल्ड स्टैंडर्ड</h2>
+        <p>चाणक्य अपनी सुंदर, कलात्मक बनावट के लिए जाना जाता है। यह दैनिक भास्कर और राजस्थान पत्रिका जैसे प्रमुख हिंदी समाचार पत्रों का मुख्य फोंट है।</p>
+
+        <h2>2. दूसरे टूल्स में चाणक्य क्यों टूटता है?</h2>
+        <p>चाणक्य "संयुक्त अक्षरों" (Ligatures) का उपयोग करता है। उदाहरण के लिए, चाणक्य में 'क्र' एक अलग प्रतीक है, न कि 'क' + 'र' का जोड़। अन्य कनवर्टर इसे त्रुटि या प्रश्न चिह्न (??) मान लेते हैं।</p>
+
+        <h2>3. Wishall का फायदा</h2>
+        <p>Wishall 500 से अधिक दुर्लभ चाणक्य प्रतीकों को पहचानता है। हम "हलंत" (आधे अक्षरों) को सही तरीके से संभालते हैं ताकि 'विद्या' जैसे शब्द प्रिंट की तरह जुड़े और सुंदर रहें।</p>
+    </div>
+
+    <script>
+    function toggleLanguage() {
+        const en = document.getElementById('content-en'); const hi = document.getElementById('content-hi'); const btn = document.getElementById('langBtn');
+        if (en.style.display === 'none') { en.style.display = 'block'; hi.style.display = 'none'; btn.innerText = "हिंदी में पढ़ें"; } else { en.style.display = 'none'; hi.style.display = 'block'; btn.innerText = "Read in English"; }
+    }
+    </script>
+</body>
+</html>

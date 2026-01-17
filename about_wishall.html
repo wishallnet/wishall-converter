@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Smart Editor</title>
+<link rel="stylesheet" href="style.css">
+<style>body { padding: 40px; overflow-y:auto; font-size:16px; line-height:1.8; color:#d4d4d4; } h1, h2 { color:#cd9b47; } p, li { margin-bottom:10px; } ul { padding-left:20px; }</style>
+</head>
+<body>
+    <div style="text-align:right; margin-bottom:20px;">
+        <button id="langBtn" class="lang-btn" onclick="toggleLanguage()">हिंदी में पढ़ें</button>
+    </div>
+
+    <div id="content-en">
+        <h1>Wishall Smart Hindi Editor</h1>
+        <hr style="border-top:1px solid #444; margin:20px 0;">
+        
+        <h2>1. More Than a Converter</h2>
+        <p>While most websites only change fonts, <b>Wishall Smart Editor</b> acts as a "Language Processor". We clean, format, and correct the Hindi language itself.</p>
+
+        <h2>2. Key Features</h2>
+        <ul>
+            <li><b>Auto Spell Fix:</b> Automatically corrects common typos (e.g., 'आशिर्वाद' → 'आशीर्वाद').</li>
+            <li><b>Format Cleaner:</b> Removes extra spaces and blank lines from copied text.</li>
+            <li><b>Punctuation Logic:</b> Converts English Pipe (|) to Hindi Danda (।), fixes dots (..), and standardizes quotes.</li>
+        </ul>
+
+        <h2>3. Honorific Removal (For Journalists)</h2>
+        <p>A unique feature for news editors to neutralize text. It removes titles like:</p>
+        <ul>
+            <li>Shri (श्री), Ji (जी)</li>
+            <li>Mananiya (माननीय)</li>
+            <li><b>Mahoday (महोदय)</b></li>
+        </ul>
+        <p>This converts <i>"Shri Modi Ji said..."</i> to a neutral <i>"Modi said..."</i> instantly.</p>
+    </div>
+
+    <div id="content-hi" style="display:none;">
+        <h1>Wishall स्मार्ट हिंदी एडिटर</h1>
+        <hr style="border-top:1px solid #444; margin:20px 0;">
+        
+        <h2>1. सिर्फ कनवर्टर नहीं</h2>
+        <p>जहाँ बाकी वेबसाइटें केवल फोंट बदलती हैं, <b>Wishall स्मार्ट एडिटर</b> एक "भाषा प्रोसेसर" है। हम हिंदी भाषा को साफ़ और शुद्ध करते हैं।</p>
+
+        <h2>2. मुख्य विशेषताएं</h2>
+        <ul>
+            <li><b>वर्तनी सुधार:</b> सामान्य गलतियों को अपने आप ठीक करता है (जैसे 'आशिर्वाद' → 'आशीर्वाद')।</li>
+            <li><b>फॉर्मेट क्लीनर:</b> कॉपी किए गए टेक्स्ट से फालतू स्पेस और खाली लाइनें हटाता है।</li>
+            <li><b>विराम चिह्न:</b> इंग्लिश पाइप (|) को हिंदी पूर्णविराम (।) में बदलता है।</li>
+        </ul>
+
+        <h2>3. आदरसूचक शब्द हटाना (पत्रकारों के लिए)</h2>
+        <p>न्यूज़ एडिटर्स के लिए एक खास फीचर। यह इन शब्दों को हटा देता है:</p>
+        <ul>
+            <li>श्री, जी</li>
+            <li>माननीय</li>
+            <li><b>महोदय</b></li>
+        </ul>
+        <p>इससे <i>"श्री मोदी जी ने कहा..."</i> तुरंत <i>"मोदी ने कहा..."</i> में बदल जाता है।</p>
+    </div>
+
+    <script>
+    function toggleLanguage() {
+        const en = document.getElementById('content-en'); const hi = document.getElementById('content-hi'); const btn = document.getElementById('langBtn');
+        if (en.style.display === 'none') { en.style.display = 'block'; hi.style.display = 'none'; btn.innerText = "हिंदी में पढ़ें"; } else { en.style.display = 'none'; hi.style.display = 'block'; btn.innerText = "Read in English"; }
+    }
+    </script>
+</body>
+</html>

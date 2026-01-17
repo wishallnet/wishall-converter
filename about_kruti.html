@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Kruti Dev</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    body { padding: 40px; overflow-y:auto; font-size:16px; line-height:1.8; color:#d4d4d4; padding-bottom: 80px; }
+    h1, h2 { color:#cd9b47; } 
+    p { margin-bottom:15px; } 
+    ul { padding-left: 20px; margin-bottom: 20px; }
+    .lang-btn { float:right; margin-bottom:20px; background:#333; color:#fff; border:1px solid #555; padding:5px 15px; cursor:pointer; border-radius:4px; }
+</style>
+</head>
+<body>
+    <button id="langBtn" class="lang-btn" onclick="toggleLanguage()">हिंदी में पढ़ें</button>
+    <div style="clear:both;"></div>
+
+    <div id="content-en">
+        <h1>Kruti Dev Converter Guide</h1>
+        <hr style="border-top:1px solid #444; margin:20px 0;">
+        
+        <h2>1. Why is Kruti Dev Important?</h2>
+        <p>Kruti Dev is the standard font for Government Typing Exams (SSC, State Exams, MP Patwari, UP Police) in India. It is a legacy font that requires specific Remington keyboard mapping. While Unicode (Mangal) is the web standard, many legal and government offices still operate on Kruti Dev 010.</p>
+
+        <h2>2. The 'Smart Quotes' Problem</h2>
+        <p>A major issue users face is when typing in MS Word. Word automatically changes straight quotes (') to curly "Smart Quotes" (‘ ’). In Kruti Dev, the quote key is used for the character 'Sh' (श) and 'Shha' (ष).</p>
+        <p>When these quotes curl, the underlying code changes, and ordinary converters translate them incorrectly. For example, 'Shaam' (शाम) might turn into 'Shhaam' (षाम) or garbage text.</p>
+
+        <h2>3. Wishall's Smart Solution</h2>
+        <p><b>Wishall Smart Hindi Editor</b> solves this instantly. Our algorithm detects these curled quotes and reverts them to their correct legacy code before conversion.</p>
+        <p><b>How to use:</b> Simply ensure the "Smart Quotes (श/ष)" toggle is enabled in the left sidebar. This guarantees 100% accuracy for your exam practice.</p>
+        
+        <h2>4. Features</h2>
+        <ul>
+            <li>Accurate श/ष conversion.</li>
+            <li>Retains original formatting.</li>
+            <li>Fast and secure processing.</li>
+        </ul>
+    </div>
+
+    <div id="content-hi" style="display:none;">
+        <h1>कृति देव कनवर्टर गाइड</h1>
+        <hr style="border-top:1px solid #444; margin:20px 0;">
+        
+        <h2>1. कृति देव क्यों महत्वपूर्ण है?</h2>
+        <p>कृति देव भारत में सरकारी नौकरी की टाइपिंग परीक्षाओं (SSC, राज्य परीक्षा, पटवारी) का मानक फोंट है। यह रेमिंगटन कीबोर्ड लेआउट का उपयोग करता है। हालांकि इंटरनेट पर यूनिकोड (मंगल) चलता है, लेकिन अदालतों और सरकारी दफ्तरों में आज भी कृति देव 010 का बोलबाला है।</p>
+
+        <h2>2. 'स्मार्ट कोट्स' की समस्या</h2>
+        <p>एमएस वर्ड (MS Word) में टाइप करते समय सबसे बड़ी समस्या 'कोट्स' की आती है। वर्ड अपने आप सीधे कोट्स (') को घुमावदार कोट्स (‘ ’) में बदल देता है।</p>
+        <p>चूंकि कृति देव में 'श' और 'ष' के लिए कोट्स वाली की (Key) का उपयोग होता है, इसलिए यह ऑटो-फॉर्मेटिंग आपके शब्दों को बदल देती है। साधारण कनवर्टर इसे समझ नहीं पाते और 'शाम' को 'षाम' बना देते हैं।</p>
+
+        <h2>3. Wishall का स्मार्ट समाधान</h2>
+        <p><b>Wishall स्मार्ट हिंदी एडिटर</b> इसे तुरंत ठीक करता है। हमारा टूल इन घुमावदार कोट्स को पहचानता है और उन्हें सही कोड में बदल देता है।</p>
+        <p><b>उपयोग:</b> बस बाईं ओर साइडबार में "Smart Quotes (श/ष)" बटन को चालू रखें। इससे आपकी फाइल 100% शुद्ध बनेगी।</p>
+    </div>
+
+    <script>
+    function toggleLanguage() {
+        const en = document.getElementById('content-en');
+        const hi = document.getElementById('content-hi');
+        const btn = document.getElementById('langBtn');
+        if (en.style.display === 'none') {
+            en.style.display = 'block'; hi.style.display = 'none'; btn.innerText = "हिंदी में पढ़ें";
+        } else {
+            en.style.display = 'none'; hi.style.display = 'block'; btn.innerText = "Read in English";
+        }
+    }
+    </script>
+</body>
+</html>

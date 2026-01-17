@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About 4C Gandhi</title>
+<link rel="stylesheet" href="style.css">
+<style>body { padding: 40px; overflow-y:auto; font-size:16px; line-height:1.8; color:#d4d4d4; } h1, h2 { color:#cd9b47; } p { margin-bottom:15px; }</style>
+</head>
+<body>
+    <div style="text-align:right; margin-bottom:20px;">
+        <button id="langBtn" class="lang-btn" onclick="toggleLanguage()">हिंदी में पढ़ें</button>
+    </div>
+
+    <div id="content-en">
+        <h1>4C Gandhi Converter Guide</h1>
+        <hr style="border-top:1px solid #444; margin:20px 0;">
+        
+        <h2>1. What is 4C Gandhi?</h2>
+        <p>4C Gandhi is a specialized legacy font used heavily in the Indian publishing industry (books, magazines) before the digital boom. It uses a unique encoding system different from Kruti Dev.</p>
+
+        <h2>2. The "Moving Matra" Challenge</h2>
+        <p>The biggest headache with 4C Gandhi is the positioning of the "Chhoti-E" (ि) matra. In the raw code, this matra often appears BEFORE the letters it modifies, which confuses standard converters.</p>
+        <p>For example, in a word like 'Karyakartao' (कार्यकर्ताओं), a normal converter might place the matra on the wrong character, making it unreadable.</p>
+
+        <h2>3. Wishall's Native Decoding</h2>
+        <p>Wishall uses a native decoding engine specifically built for 4C Gandhi. Instead of simple replacement, it analyzes the word structure.</p>
+        <p>With <b>Wishall Smart Hindi Editor</b>, complex words with half-characters (Halant) and Reph (ra-ki-matra) are converted with 99.9% accuracy.</p>
+    </div>
+
+    <div id="content-hi" style="display:none;">
+        <h1>4C गांधी कनवर्टर गाइड</h1>
+        <hr style="border-top:1px solid #444; margin:20px 0;">
+        
+        <h2>1. 4C गांधी क्या है?</h2>
+        <p>4C गांधी एक विशेष पुराना फोंट है जिसका उपयोग भारतीय प्रकाशन उद्योग (किताबें, पत्रिकाएं) में डिजिटल क्रांति से पहले खूब किया जाता था। इसकी कोडिंग कृति देव से अलग है।</p>
+
+        <h2>2. "मात्रा" की चुनौती</h2>
+        <p>4C गांधी के साथ सबसे बड़ी सिरदर्दी "छोटी-इ" (ि) की मात्रा है। कच्चे कोड में, यह मात्रा अक्सर उन अक्षरों से पहले आती है जिन पर यह लगती है, जिससे साधारण कनवर्टर भ्रमित हो जाते हैं।</p>
+        <p>उदाहरण के लिए, 'कार्यकर्ताओं' जैसे शब्द में, एक सामान्य कनवर्टर मात्रा को गलत जगह लगा सकता है।</p>
+
+        <h2>3. Wishall की तकनीक</h2>
+        <p>Wishall एक नेटिव डिकोडिंग इंजन का उपयोग करता है जिसे विशेष रूप से 4C गांधी के लिए बनाया गया है। यह केवल अक्षरों को बदलता नहीं है, बल्कि शब्द की संरचना को समझता है।</p>
+        <p><b>Wishall स्मार्ट हिंदी एडिटर</b> के साथ, आधे अक्षरों (हलंत) और रेफ (र की मात्रा) वाले जटिल शब्द 99.9% शुद्धता के साथ बदलते हैं।</p>
+    </div>
+
+    <script>
+    function toggleLanguage() {
+        const en = document.getElementById('content-en'); const hi = document.getElementById('content-hi'); const btn = document.getElementById('langBtn');
+        if (en.style.display === 'none') { en.style.display = 'block'; hi.style.display = 'none'; btn.innerText = "हिंदी में पढ़ें"; } else { en.style.display = 'none'; hi.style.display = 'block'; btn.innerText = "Read in English"; }
+    }
+    </script>
+</body>
+</html>
